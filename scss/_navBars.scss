@@ -1,0 +1,42 @@
+//inicia navBar
+
+#navBar{ 
+    div a{
+        display: flex;
+        justify-content: center;
+        img{
+            width: $w-70;
+            @media (min-width: 992px){
+                width: $w-80;
+            }
+        }
+    }
+    div{
+        @media (min-width: 992px){
+            .nav__w{
+                width: $w-100;
+            }
+        }   
+        ul{
+            li a{
+                font-size: $textSm;
+                font-weight: $textRegular;
+                color: $negro;
+                &:hover{
+                    color: $blanco;
+                }
+            }
+        }    
+    } 
+
+}
+
+@media (min-width: 992px){
+    .nav__ul{
+        width: $w-100;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+}
+

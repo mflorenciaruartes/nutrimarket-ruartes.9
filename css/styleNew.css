@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: rgb(34, 91, 16);
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0;
+  animation-name: aparecer2;
+  animation-duration: 3s;
+}
+
+h2 {
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+@keyframes aparecer2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+h3 {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+p {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.bg-green {
+  background-color: rgb(34, 91, 16);
+}
+
+.bg-greenl1 {
+  background-color: rgb(200, 214, 195);
+}
+
+.bg-greenl2 {
+  background-color: rgb(227, 234, 225);
+}
+
+.bg-greenl3 {
+  background-color: rgb(117, 152, 106);
+}
+
+.bg-greenl4 {
+  background-color: rgb(34, 91, 16);
+}
+
+.bg-linear1 {
+  background: linear-gradient(to right, rgb(34, 91, 16), white);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section div figure figcaption {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+}
+section div figure a {
+  display: flex;
+  justify-content: center;
+}
+section div figure a img {
+  width: 70%;
+  border: solid black 1px;
+}
+@media (min-width: 992px) {
+  section div figure a img {
+    width: 100%;
+  }
+  section div figure a img:hover {
+    animation-name: aparecer1;
+    animation-duration: 1s;
+  }
+  @keyframes aparecer1 {
+    from {
+      opacity: 0.7;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+section article div a {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+section article div img {
+  width: 70%;
+}
+@media (min-width: 992px) {
+  section article div img {
+    width: 100%;
+  }
+}
+
+form {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+form label, form input {
+  display: block;
+  color: black;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 400;
+  width: 60%;
+}
+form textarea {
+  color: black;
+  width: 90%;
+  height: 30vh;
+}
+
+.input__enviar {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.section__iframe--md {
+  width: 90%;
+  height: 30vh;
+}
+
+@media (min-width: 992px) {
+  .index__form-div {
+    align-items: flex-start;
+    text-align: start;
+    padding-left: 20px;
+  }
+}
+.gonatural__aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside ul {
+  list-style: none;
+  line-height: 1.5em;
+}
+aside ul a {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "nav nav" "header header" "h1 h1" "section aside" "pie pie";
+}
+
+.mainNav {
+  grid-area: nav;
+}
+
+.header {
+  grid-area: header;
+}
+
+.titulo {
+  grid-area: h1;
+}
+
+.section {
+  grid-area: section;
+}
+
+.pie {
+  grid-area: pie;
+}
+
+.color-green {
+  color: rgb(34, 91, 16);
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background-color: rgb(34, 91, 16);
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+footer a img {
+  width: 40px;
+}
+
+#navBar div a {
+  display: flex;
+  justify-content: center;
+}
+#navBar div a img {
+  width: 70%;
+}
+@media (min-width: 992px) {
+  #navBar div a img {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  #navBar div .nav__w {
+    width: 100%;
+  }
+}
+#navBar div ul li a {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: black;
+}
+#navBar div ul li a:hover {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .nav__ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styleNew.css.map */

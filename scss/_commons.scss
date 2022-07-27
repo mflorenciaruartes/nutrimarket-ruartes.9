@@ -1,0 +1,228 @@
+
+h1,
+h2,
+h3{
+    font-family: $fontMain;
+}
+
+
+h1 {
+    color: $verdeH;
+    font-size: $textLg;
+    font-weight: $textBold;
+    text-align: $textCenter;
+    padding: 10px 0;
+    animation-name: aparecer2;
+    animation-duration: 3s;
+}
+
+h2 {
+    color: $negro;
+    font-size: $textMd;
+    font-weight: $textRegular;
+    padding-top: 10px;
+}
+@keyframes aparecer2{
+    from{opacity: 0;}
+    to{opacity: 1;}
+    }
+h3{
+    color:$negro;
+    font-size: $textSm;
+    font-weight: $textRegular;
+}
+p{
+    color:$negro;
+    font-size: $textSm;
+    font-weight: $textXlight;
+    line-height: $lineH1;
+}
+
+//backgrounds
+.bg-green{
+    background-color:$verdeH;
+}
+//chequear que esta se repite
+.bg-greenl1{
+    background-color:$verdeL2;
+}
+.bg-greenl2{
+    background-color: $verdeL;
+}
+.bg-greenl3{
+    background-color: $verdeHL;
+}
+.bg-greenl4{
+    background-color:$verdeH;
+}
+.bg-linear1{
+    background: linear-gradient(to right,$verdeH,$blanco);
+}
+
+//section figure 
+section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div figure {
+            figcaption {
+                color: $negro;
+                font-size: $textSm;
+                font-weight: $textRegular;
+                text-align: $textCenter;
+            }
+            a{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: $w-70;
+                    border: solid $negro 1px;
+                    @media (min-width: 992px){
+                        width: $w-100;
+                        &:hover{
+                            animation-name: aparecer1;
+                            animation-duration: 1s;
+                        }
+                        @keyframes aparecer1{
+                            from{opacity: 0.7;}
+                            to{opacity: 1;}
+                            }
+
+                    }
+                }
+            }
+
+        }
+}
+
+//section article
+section article div {
+    a {
+        color: $negro;
+        font-size: $textSm;
+        font-weight: $textBold;
+        text-decoration: $textDnone;
+        text-align: $textCenter;
+    }
+    img{
+        width: $w-70;
+        @media (min-width: 992px){
+            width: $w-100;
+        }
+    }
+}
+
+
+//form
+form{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    label, input {
+        display: block;
+        color: $negro;
+        font-size: $textSm;
+        line-height: $lineH1;
+        font-weight: $textXlight;
+        width: $w-60;
+    }
+    textarea{
+        color: $negro;
+        width: $w-90;
+        height: $h-30;
+    }
+} 
+
+.input__enviar {
+    width: $w-30;
+    display: flex;
+    justify-content: center;
+}
+.section__iframe--md{
+    width: $w-90;
+    height: $h-30;
+}
+@media (min-width: 992px){
+    .index__form-div {
+        align-items: flex-start;
+        text-align: start;
+        padding-left: 20px;
+    }
+}
+
+
+//Go natural
+.gonatural__aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside ul {
+    list-style: none;
+    line-height: $lineH1;
+    a {
+        color: $negro;
+        font-size: $textSm;
+        font-weight: $textXlight;
+        text-decoration: $textDnone;
+    }
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "nav nav"
+    "header header"
+    "h1 h1"
+    "section aside"
+    "pie pie";
+} 
+.mainNav{
+    grid-area: nav;
+}
+
+.header{
+    grid-area: header;
+}
+.titulo{
+    grid-area: h1;
+}
+.section{
+    grid-area: section;  
+}
+.pie{
+    grid-area: pie;
+}
+
+
+
+.color-green {
+    color: $verdeH;
+}
+
+
+//footer
+footer {
+    width: $w-100;
+    height: $h-a;
+    padding: 20px 0;
+    background-color: $verdeH;
+    font-size: $textSm;
+    line-height: $lineH1;
+    font-weight: $textLight;
+    text-decoration: $textDnone;
+    color: $blanco;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    a img{
+        width: 40px;
+    }
+}
+
