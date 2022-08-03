@@ -1,0 +1,6 @@
+//mixins
+@mixin txt($Size, $Weight, $Align) {
+    font-size: $Size;
+    font-weight: $Weight;
+    text-align: $Align;
+}

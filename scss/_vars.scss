@@ -1,12 +1,16 @@
 //vars
 
-//colors
-$verdeH: rgba(34, 91, 16, 1);
-$verdeHL: rgba(117, 152, 106, 1);
-$verdeL: rgba(227, 234, 225, 1);
-$verdeL2: rgba(200, 214, 195, 1);
-$negro: black;
-$blanco: white;
+//colors - maps
+$color:(
+    'blanco': white,
+    'negro': black,
+    'v1':rgba(34, 91, 16, 1),
+    'v2': #47793b,
+    'v3': #759b67,
+    'v4':#a3bc94,
+    'v5': #d1dec1,
+    'v6': #ffffee,);
+
 
 //sizing
 $w-100: 100%;
@@ -16,6 +20,7 @@ $w-70: 70%;
 $w-60: 60%;
 $w-50:50%;
 $w-30: 30%;
+$w-20: 20%;
 
 $h-30:30vh;
 $h-a:auto;

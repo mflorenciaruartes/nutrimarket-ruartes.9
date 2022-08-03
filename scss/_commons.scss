@@ -7,19 +7,16 @@ h3{
 
 
 h1 {
-    color: $verdeH;
-    font-size: $textLg;
-    font-weight: $textBold;
-    text-align: $textCenter;
+    color: map-get($map: $color, $key: v1);
+    @include txt($textLg, $textBold, $textCenter);
     padding: 10px 0;
     animation-name: aparecer2;
     animation-duration: 3s;
 }
 
 h2 {
-    color: $negro;
-    font-size: $textMd;
-    font-weight: $textRegular;
+    color: map-get($map: $color, $key: v1);
+    @include txt($textMd, $textBold, $textLeft);
     padding-top: 10px;
 }
 @keyframes aparecer2{
@@ -27,56 +24,66 @@ h2 {
     to{opacity: 1;}
     }
 h3{
-    color:$negro;
-    font-size: $textSm;
-    font-weight: $textRegular;
+    color:map-get($map: $color, $key: negro);
+    @include txt($textSm, $textRegular, $textLeft);
 }
 p{
-    color:$negro;
-    font-size: $textSm;
-    font-weight: $textXlight;
+    color:map-get($map: $color, $key: negro);
+    @include txt($textXsm, $textXlight, $textJustify);
     line-height: $lineH1;
 }
 
 //backgrounds
 .bg-green{
-    background-color:$verdeH;
+    background-color:map-get($map: $color, $key: v1);
 }
-//chequear que esta se repite
 .bg-greenl1{
-    background-color:$verdeL2;
+    background-color:map-get($map: $color, $key: v5);
 }
 .bg-greenl2{
-    background-color: $verdeL;
+    background-color: map-get($map: $color, $key: v4);
 }
 .bg-greenl3{
-    background-color: $verdeHL;
-}
-.bg-greenl4{
-    background-color:$verdeH;
+    background-color: map-get($map: $color, $key: v3);
 }
 .bg-linear1{
-    background: linear-gradient(to right,$verdeH,$blanco);
+    background: linear-gradient(to right,map-get($map: $color, $key: v1), map-get($map: $color, $key: blanco));
 }
 
-//section figure 
+//extends
+.btn-base{
+    background-color: map-get($map: $color, $key: v1);
+    color: map-get($map: $color, $key: blanco);
+    @include txt($textXsm, $textXlight, $textCenter);
+    text-decoration: $textDnone;
+    &:hover{
+        font-weight: $textRegular;
+        color: map-get($map: $color, $key: blanco);
+    }
+}
+
+.btn-mod{
+    @extend .btn-base;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+//index section figure 
 section {
         display: flex;
         flex-direction: column;
         align-items: center;
         div figure {
             figcaption {
-                color: $negro;
-                font-size: $textSm;
-                font-weight: $textRegular;
-                text-align: $textCenter;
+                color: map-get($map: $color, $key: negro);
+                @include txt($textSm, $textRegular, $textCenter);
             }
             a{
                 display: flex;
                 justify-content: center;
                 img{
                     width: $w-70;
-                    border: solid $negro 1px;
+                    border: solid map-get($map: $color, $key: negro) 1px;
                     @media (min-width: 992px){
                         width: $w-100;
                         &:hover{
@@ -95,14 +102,12 @@ section {
         }
 }
 
-//section article
+//index section article
 section article div {
     a {
-        color: $negro;
-        font-size: $textSm;
-        font-weight: $textBold;
+        color: map-get($map: $color, $key: negro);
+        @include txt($textSm, $textBold, $textCenter);
         text-decoration: $textDnone;
-        text-align: $textCenter;
     }
     img{
         width: $w-70;
@@ -113,7 +118,7 @@ section article div {
 }
 
 
-//form
+//index y contacto form
 form{
     padding-left: 10px;
     padding-bottom: 10px;
@@ -123,14 +128,13 @@ form{
     text-align: center;
     label, input {
         display: block;
-        color: $negro;
-        font-size: $textSm;
+        color: map-get($map: $color, $key: negro);
+        @include txt($textSm, $textXlight, $textCenter);
         line-height: $lineH1;
-        font-weight: $textXlight;
         width: $w-60;
     }
     textarea{
-        color: $negro;
+        color: map-get($map: $color, $key: negro);
         width: $w-90;
         height: $h-30;
     }
@@ -147,9 +151,7 @@ form{
 }
 @media (min-width: 992px){
     .index__form-div {
-        align-items: flex-start;
-        text-align: start;
-        padding-left: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -165,9 +167,8 @@ aside ul {
     list-style: none;
     line-height: $lineH1;
     a {
-        color: $negro;
-        font-size: $textSm;
-        font-weight: $textXlight;
+        color: map-get($map: $color, $key: negro);
+        @include txt($textSm, $textXlight, $textLeft);
         text-decoration: $textDnone;
     }
 }
@@ -201,26 +202,18 @@ aside ul {
 }
 
 
-
-.color-green {
-    color: $verdeH;
-}
-
-
 //footer
 footer {
     width: $w-100;
     height: $h-a;
     padding: 20px 0;
-    background-color: $verdeH;
-    font-size: $textSm;
+    background-color: map-get($map: $color, $key: v1);
+    @include txt($textSm, $textLight, $textCenter);
     line-height: $lineH1;
-    font-weight: $textLight;
     text-decoration: $textDnone;
-    color: $blanco;
+    color: map-get($map: $color, $key: blanco);
     display: flex;
     justify-content: space-around;
-    text-align: center;
     a img{
         width: 40px;
     }

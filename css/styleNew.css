@@ -16,9 +16,10 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: rgb(34, 91, 16);
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 700;
+  text-align: left;
   padding-top: 10px;
 }
 
@@ -34,12 +35,14 @@ h3 {
   color: black;
   font-size: 1.2em;
   font-weight: 600;
+  text-align: left;
 }
 
 p {
   color: black;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;
+  text-align: justify;
   line-height: 1.5em;
 }
 
@@ -48,23 +51,37 @@ p {
 }
 
 .bg-greenl1 {
-  background-color: rgb(200, 214, 195);
+  background-color: #d1dec1;
 }
 
 .bg-greenl2 {
-  background-color: rgb(227, 234, 225);
+  background-color: #a3bc94;
 }
 
 .bg-greenl3 {
-  background-color: rgb(117, 152, 106);
-}
-
-.bg-greenl4 {
-  background-color: rgb(34, 91, 16);
+  background-color: #759b67;
 }
 
 .bg-linear1 {
   background: linear-gradient(to right, rgb(34, 91, 16), white);
+}
+
+.btn-base, .btn-mod {
+  background-color: rgb(34, 91, 16);
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-base:hover, .btn-mod:hover {
+  font-weight: 600;
+  color: white;
+}
+
+.btn-mod {
+  padding: 4px;
+  border-radius: 6px;
 }
 
 section {
@@ -108,8 +125,8 @@ section article div a {
   color: black;
   font-size: 1.2em;
   font-weight: 700;
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
 }
 section article div img {
   width: 70%;
@@ -132,8 +149,9 @@ form label, form input {
   display: block;
   color: black;
   font-size: 1.2em;
-  line-height: 1.5em;
   font-weight: 400;
+  text-align: center;
+  line-height: 1.5em;
   width: 60%;
 }
 form textarea {
@@ -155,9 +173,7 @@ form textarea {
 
 @media (min-width: 992px) {
   .index__form-div {
-    align-items: flex-start;
-    text-align: start;
-    padding-left: 20px;
+    padding-top: 20px;
   }
 }
 .gonatural__aside {
@@ -175,6 +191,7 @@ aside ul a {
   color: black;
   font-size: 1.2em;
   font-weight: 400;
+  text-align: left;
   text-decoration: none;
 }
 
@@ -205,34 +222,32 @@ aside ul a {
   grid-area: pie;
 }
 
-.color-green {
-  color: rgb(34, 91, 16);
-}
-
 footer {
   width: 100%;
   height: auto;
   padding: 20px 0;
   background-color: rgb(34, 91, 16);
   font-size: 1.2em;
-  line-height: 1.5em;
   font-weight: 500;
+  text-align: center;
+  line-height: 1.5em;
   text-decoration: none;
   color: white;
   display: flex;
   justify-content: space-around;
-  text-align: center;
 }
 footer a img {
   width: 40px;
 }
 
-#navBar div a {
-  display: flex;
-  justify-content: center;
+@media (min-width: 992px) {
+  #navBar div a {
+    display: flex;
+    justify-content: center;
+  }
 }
 #navBar div a img {
-  width: 70%;
+  width: 50%;
 }
 @media (min-width: 992px) {
   #navBar div a img {
@@ -247,6 +262,7 @@ footer a img {
 #navBar div ul li a {
   font-size: 1.2em;
   font-weight: 600;
+  text-align: center;
   color: black;
 }
 #navBar div ul li a:hover {
