@@ -50,6 +50,10 @@ p {
   background-color: rgb(34, 91, 16);
 }
 
+.bg-greenl0 {
+  background-color: #e6efdf;
+}
+
 .bg-greenl1 {
   background-color: #d1dec1;
 }
@@ -87,6 +91,7 @@ p {
 section {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 section div figure figcaption {
@@ -97,7 +102,9 @@ section div figure figcaption {
 }
 section div figure a {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
 }
 section div figure a img {
   width: 70%;
@@ -142,6 +149,7 @@ form {
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
   align-items: center;
   text-align: center;
 }
@@ -163,7 +171,9 @@ form textarea {
 .input__enviar {
   width: 30%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .section__iframe--md {
@@ -176,10 +186,30 @@ form textarea {
     padding-top: 20px;
   }
 }
+.d-div__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-p {
+  width: 60%;
+  padding: 10px;
+}
+
+article div ul li {
+  font-size: 1.1em;
+  font-weight: 500;
+  text-align: left;
+  list-style: square;
+}
+
 .gonatural__aside {
   grid-area: aside;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -194,14 +224,28 @@ aside ul a {
   text-align: left;
   text-decoration: none;
 }
-
-.contenedor {
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: repeat(5, auto);
-  grid-template-areas: "nav nav" "header header" "h1 h1" "section aside" "pie pie";
+aside ul a:hover {
+  color: black;
+  font-weight: 600;
 }
 
+.page-hover {
+  color: rgb(34, 91, 16);
+}
+.page-hover:hover {
+  color: #759b67;
+  font-weight: 700;
+  transition: none;
+}
+
+@media (min-width: 992px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "nav nav" "header header" "h1 h1" "section aside" "pie pie";
+  }
+}
 .mainNav {
   grid-area: nav;
 }
@@ -234,10 +278,60 @@ footer {
   text-decoration: none;
   color: white;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: normal;
 }
 footer a img {
   width: 40px;
+}
+
+.img__e {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  border: none;
+  background-color: #f5f8fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.img__e div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.img__e div h1 {
+  padding-top: 40px;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .img__e div h1 {
+    font-size: 2em;
+  }
+}
+.img__e div h2 {
+  animation-name: aparecer2;
+  animation-duration: 2s;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .img__e div h2 {
+    font-size: 1.5em;
+  }
+}
+.img__e div h2 a {
+  color: rgb(34, 91, 16);
+  text-decoration: none;
+}
+.img__e div h2 a:hover {
+  font-weight: 700;
 }
 
 @media (min-width: 992px) {
